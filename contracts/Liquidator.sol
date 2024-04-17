@@ -1,4 +1,4 @@
-pragma solidity ^0.8.10;
+pragma solidity ^0.8.19;
 
 import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 import "@openzeppelin/contracts/interfaces/IERC20.sol";
@@ -17,7 +17,7 @@ contract Liquidator is WithAdmin, ReentrancyGuard {
     /// @notice Address of zkFinance Unitroller contract.
     IComptroller comptroller;
 
-    /// @notice Address of zkFinancer Treasury.
+    /// @notice Address of zkFinance Treasury.
     address public treasury;
 
     /// @notice Percent of seized amount that goes to treasury.
@@ -110,16 +110,14 @@ contract Liquidator is WithAdmin, ReentrancyGuard {
     {
         IERC20 borrowedToken = IERC20(zkToken.underlying());
         uint256 actualRepayAmount = _transferErc20(borrowedToken, msg.sender, address(this), repayAmount);
-        borrowedToken.safeApprove(address(zkToken), 0);
-        borrowedToken.safeApprove(address(zkToken), actualRepayAmount);
+        borrowedToken.approve(address(zkToken), 0);
+        borrowedToken.approve(address(zkToken), actualRepayAmount);
         zkToken.liquidateBorrow(borrower, actualRepayAmount, zkTokenCollateral);
     }
 
     /// @dev Splits the received zkTokens between the liquidator and treasury.
-    function _distributeLiquidationIncentive(ZKToken zkTokenCollateral, uint256 siezedAmount)
-        internal returns (uint256 ours, uint256 theirs)
-    {
-        (ours, theirs) = _splitLiquidationIncentive(siezedAmount);
+    function _distributeLiquidationIncentive(ZKToken zkTokenCollateral, uint256 seizedAmount) internal returns (uint256 ours, uint256 theirs) {
+        (ours, theirs) = _splitLiquidationIncentive(seizedAmount);
         require(
             zkTokenCollateral.transfer(msg.sender, theirs),
             "failed to transfer to liquidator"

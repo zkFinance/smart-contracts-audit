@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: BSD-3-Clause
-pragma solidity ^0.8.10;
+pragma solidity ^0.8.17;
 
 import "./ZKToken.sol";
 import "./ErrorReporter.sol";
@@ -78,7 +78,7 @@ contract Comptroller is ComptrollerStorage, ComptrollerInterface, ComptrollerErr
     /// @notice Emitted when ZGT receivable for a user has been updated.
     event ZGTReceivableUpdated(address indexed user, uint oldZGTReceivable, uint newZGTReceivable);
 
-    // @notice Emitted when liquidator adress is changed
+    // @notice Emitted when liquidator address is changed
     event NewLiquidatorContract(address oldLiquidatorContract, address newLiquidatorContract);
     
     /// @notice Emitted when ZGT claiming state is changed by admin
@@ -1307,6 +1307,6 @@ contract Comptroller is ComptrollerStorage, ComptrollerInterface, ComptrollerErr
      * @return The address of ZGT
      */
     function getZGTAddress() virtual public view returns (address) {
-        return 0xF2e759BAdEfc958899C2502ddc1521662B0B69A0;
+        return 0x9BDd9140c95c4bFAa1FF21fF54802412452a330e;
     }
 }
