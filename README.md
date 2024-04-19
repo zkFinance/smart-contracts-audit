@@ -14,6 +14,6 @@
 
 - zkETH - `0xb2b41c185A2877653c428E080cBb4D1cDeC71c73` - [Explorer](https://explorer.zksync.io/address/0xb2b41c185A2877653c428E080cBb4D1cDeC71c73#contract)
 - zkToken USDC - `0xD3Be2F5888d695a9021DCF0f818D4b5223FCAa9a` - [Explorer](https://explorer.zksync.io/address/0xD3Be2F5888d695a9021DCF0f818D4b5223FCAa9a#contract)
-- zkToken USDT - `0xe2b5c9191C9495Ad84335490b6b0387191E70Ba4` - [Explorer](https://explorer.zksync.io/address/0xe2b5c9191C9495Ad84335490b6b0387191E70Ba#contract)
+- zkToken USDT - `0xe2b5c9191C9495Ad84335490b6b0387191E70Ba4` - [Explorer](https://explorer.zksync.io/address/0xe2b5c9191C9495Ad84335490b6b0387191E70Ba4#contract)
 - zkToken WBTC - `0xF41403BF6A8EdB96CEC6D19703646d4E11e321e2` - [Explorer](https://explorer.zksync.io/address/0xF41403BF6A8EdB96CEC6D19703646d4E11e321e2#contract)
 - zkToken DAI - `0xA25A11f7095bD9f79Af5e00CcA8fa0bdd66a22dE` - [Explorer](https://explorer.zksync.io/address/0xA25A11f7095bD9f79Af5e00CcA8fa0bdd66a22dE#contract)
