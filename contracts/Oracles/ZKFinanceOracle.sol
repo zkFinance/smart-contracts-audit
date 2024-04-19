@@ -25,6 +25,7 @@ contract ZKFinanceOracle is PriceOracle {
 
         initializePriceForPair("ETH/USD");
         initializePriceForPair("USDT/USD");
+        initializePriceForPair("BTC/USD");
         initializePriceForPair("WBTC/USD");
         initializePriceForPair("USDC/USD");
         initializePriceForPair("DAI/USD");
@@ -113,6 +114,7 @@ contract ZKFinanceOracle is PriceOracle {
         updateLastKnownPrice("ETH/USD");
         updateLastKnownPrice("USDT/USD");
         updateLastKnownPrice("WBTC/USD");
+        updateLastKnownPrice("BTC/USD");
         updateLastKnownPrice("USDC/USD");
         updateLastKnownPrice("DAI/USD");
         updateLastKnownPrice("BUSD/USD");
